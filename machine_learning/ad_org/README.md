@@ -12,4 +12,4 @@
 ###### Testscore(logloss) + Algorithm
 
 ### Note:
-*If you have anything in mind feel free to reach us @gulshan@vidooly.com or post any issue; but donot forget to tag 'Ad_ORG'.*
+*If you have anything in mind feel free to reach us @gulshan@vidooly.com or post any issue; but donot forget to tag 'AD_ORG'.*
