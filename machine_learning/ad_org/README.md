@@ -1,5 +1,6 @@
 Problem Statement:-  
- Foy any video YouTube provides some data metrices such as Views, Likes, Comments, Shares, etc available publically. Based on these data    metrices one has to predict the ad views (views earned through advertisements). External library or any dataset can be used for the same purpose.
+
+Foy any video YouTube provides some data metrices such as Views, Likes, Comments, Shares, etc available publically. Based on these data    metrices one has to predict the ad views (views earned through advertisements). External library or any dataset can be used for the same purpose.
 
 Submission:-  
   Entire algorithm alogn with the test file. Test file should be in .csv format and inline below headers & value: 
