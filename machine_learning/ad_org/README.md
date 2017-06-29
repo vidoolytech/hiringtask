@@ -9,7 +9,7 @@
 
 ### Evaluation
 ###### Here is the formula based on which calculation will be made: 
-| Testscore(logloss) + Algorithm |
+| Test score(logloss) + Algorithm |
 | ------------------------------ |
 
 ### Note:
