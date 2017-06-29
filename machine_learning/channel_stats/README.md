@@ -6,7 +6,8 @@
 
 ## Evaluation
 ###### Here is the formula based on which calculation will be made:
-###### Test score on Views + Algorithm
+| Test score on Views + Algorithm |
+| ------------------------------- |
 
 ### Note:
 *If you have anything in mind feel free to reach us @gulshan@vidooly.com or post any issue; but donot forget to tag 'CH_STATS'.*
