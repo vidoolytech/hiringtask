@@ -11,5 +11,5 @@
 ###### Here is the formula based on which calculation will be made: 
 ###### Testscore(logloss) + Algorithm
 
-### Note:-
-###### * If you have anything in mind feel free to reach us or post any issue; but donot forget to tag 'Ad_ORG'.
+### Note:
+*If you have anything in mind feel free to reach us or post any issue; but donot forget to tag 'Ad_ORG'.*
