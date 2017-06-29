@@ -1,3 +1,3 @@
 # Hiring Tasks
 
-### This folder had been created for the hirinh prupose only.
+### This folder had been created for the hiring prupose only.
