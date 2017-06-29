@@ -5,7 +5,7 @@ Problem Statement:
 
 
 Submission:
-  Code with predicted value in same csv format as given for date next three month(april to june) on same channelid.
+  Code with predicted value in same csv format as given for date next three month(april to june) on same channelids.
 
 Evaluation:
   Test score on views + code
