@@ -9,7 +9,8 @@
 
 ### Evaluation
 ###### Here is the formula based on which calculation will be made: 
-###### Testscore(logloss) + Algorithm
+| Testscore(logloss) + Algorithm |
+| ------------------------------ |
 
 ### Note:
 *If you have anything in mind feel free to reach us @gulshan@vidooly.com or post any issue; but donot forget to tag 'AD_ORG'.*
