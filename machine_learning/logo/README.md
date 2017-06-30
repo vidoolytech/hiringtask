@@ -1,10 +1,11 @@
-Problem Statement:
-Build a model which can detect/classify images in labeld logo class. No need to train model huge number of times(if you have resources you can).
+## Problem Statement
+###### A model needs to be build that can *Classify* & *Detect* images in the labeled logo class. In case of resources' availability no need "train your model" n number of times.
 
-Submission:
-Code 
+## Submission
+###### Entire model/code needs to be submitted.
 
-Evaluation:
-code (extra points for detection) 
+## Evaluation
+###### Will be based on model developed. "*Image Detection*" would be an added advantage.
 
-Any Query please mention in Issue with Attaching 'LOGO' in your query
+### Note:
+*If you have anything in mind feel free to reach us @gulshan@vidooly.com or post any issue; but donot forget to tag 'LOGO'.*
