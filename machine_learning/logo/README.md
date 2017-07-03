@@ -1,5 +1,8 @@
 ## Problem Statement
 ###### A model needs to be build that can *Classify* or *Detect* images in the labeled logo class. In case of resources' availability no need "train your model" n number of times.
+**Description:**
+- Image Classification: Calssify image in the given classes
+- Image Detection: Find the square where logo is present
 
 ## Submission
 ###### Entire model/code needs to be submitted.
