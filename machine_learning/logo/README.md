@@ -8,7 +8,7 @@ This model's accuracy can be increased by using convolutions to detect features 
 
 Also The training accuracy is __100%__ using Linear SVM at C = 1.0
 
-The number of clusters created are 300 i.e. the number of significant features.
+The number of clusters created are 400 i.e. the number of significant features.
 
 The testing performed is on the query set on full images.
 
