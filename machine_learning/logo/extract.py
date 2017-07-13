@@ -21,8 +21,8 @@ map_dict = {
 }
 
 
-annotations = "logos/flickr_logos_27_dataset_training_set_annotation.txt"
-imgpath = "logos/flickr_logos_27_dataset_images/"
+annotations = "flickr_logos_27_dataset/flickr_logos_27_dataset_training_set_annotation.txt"
+imgpath = "flickr_logos_27_dataset/flickr_logos_27_dataset_images/"
 
 
 def mean(numbers):
