@@ -1,14 +1,17 @@
-## Problem Statement
-###### A model needs to be build that can *Classify* or *Detect* images in the labeled logo class. In case of resources' availability no need "train your model" n number of times.
-**Description:**
-- Image Classification: Calssify image in the given classes
-- Image Detection: Find the square where logo is present
+# Logo Classification
 
-## Submission
-###### Entire model/code needs to be submitted.
+This code performs image classification on the Flickr 27 Logos dataset for first 10 Logos using SIFT Feature Extractor and Kmeans Clustering for extracting significant features which are then fed into a Linear SVM Detector.
 
-## Evaluation
-###### Will be based on model developed. "*Detection*" would be an added advantage.
+This code is developed on the concept of bag of Visual Words Model, and these features extracted are clustered into words using Kmeans Clustering.
 
-### Note:
-*If you have anything in mind feel free to reach us @gulshan@vidooly.com or post any issue; but donot forget to tag 'LOGO'.*
+This model's accuracy can be increased by using convolutions to detect features with at least 5 layers but that couldn't be trained due to lack of computational power.
+
+Also The training accuracy is __100%__ using Linear SVM at C = 1.0
+
+The number of clusters created are 300 i.e. the number of significant features.
+
+The testing performed is on the query set on full images.
+
+Run `python extract.py` to extract features
+Then `python train.py` to train the Linear SVM Detector
+Finally `python test.py` to test the trained Detector
