@@ -12,6 +12,6 @@ The number of clusters created are 300 i.e. the number of significant features.
 
 The testing performed is on the query set on full images.
 
-Run `python extract.py` to extract features
-Then `python train.py` to train the Linear SVM Detector
-Finally `python test.py` to test the trained Detector
+Run `python extract.py` to extract features <br/>
+Then `python train.py` to train the Linear SVM Detector <br/>
+Finally `python test.py` to test the trained Detector <br/>
