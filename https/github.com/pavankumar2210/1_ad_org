@@ -1,0 +1,145 @@
+import pandas as pd
+import numpy as np
+from sklearn.ensemble import RandomForestClassifier
+from sklearn import cross_validation
+import csv
+test = pd.read_csv('C:\\Users\\User\\Downloads\\ad_org_test.csv',sep='\s*,\s*', skipinitialspace=True, engine='python')
+train = pd.read_csv('C:\\Users\\User\\Downloads\\ad_org_train.csv',sep='\s*,\s*', skipinitialspace=True, engine='python')
+train.dtypes
+l=[]
+for i in train['duration']:
+    a = i.lstrip('PT').rstrip('S').replace('H','.').replace('M','.').split('.')
+    try:
+        if len(a)==3:
+            time = int(a[0])*60*60 + int(a[1])*60 + int(a[2])
+        elif len(a)==2:
+            time = int(a[0])*60 + int(a[1])
+        else:
+            time = int(a[0])
+    except:
+        time = int(a[0])*60
+    l.append(time)
+train['duration'] = l
+def to_xy(df, target):
+    result = []
+    for x in df.columns:
+        if x != target:
+            result.append(x)
+  
+    target_type = df[target].dtypes
+    target_type = target_type[0] if hasattr(target_type, '__iter__') else target_type
+   
+    return df.as_matrix(result).astype(np.float32), df.as_matrix([target]).astype(np.float32)
+ l =[]
+for i in train['views']:
+    try :
+        l.append(int(i))
+    except:
+        l.append(0)
+train['views'] = l
+l =[]
+for i in train['adview']:
+    try :
+        l.append(int(i))
+    except:
+        l.append(0)
+train['adview'] = l
+l =[]
+for i in train['likes']:
+    try :
+        l.append(int(i))
+    except:
+        l.append(0)
+train['likes'] = l
+l =[]
+for i in train['dislikes']:
+    try :
+        l.append(int(i))
+    except:
+        l.append(0)
+train['dislikes'] = l
+l =[]
+for i in train['comment']:
+    try :
+        l.append(int(i))
+    except:
+        l.append(0)
+train['comment'] = l
+l =[]
+for i in train['category']:
+    try :
+        l.append(int(i))
+    except:
+        l.append(0)
+train['category'] = l
+l =[]
+for i in train['published']:
+    try :
+        l.append(int(i[:4]))
+    except:
+        l.append(0)
+train['year'] = l
+l =[]
+for i in train['published']:
+    try :
+        l.append(int(i[5:7]))
+    except:
+        l.append(0)
+train['month'] = l
+train.drop('published',axis=1,inplace=True)
+train
+train['category'].value_counts()
+train['category'] = train['views']/train['duration']
+train
+l =[]
+for i in test['views']:
+    try :
+        l.append(int(i))
+    except:
+        l.append(0)
+test['views'] = l
+l =[]
+for i in test['likes']:
+    try :
+        l.append(int(i))
+    except:
+        l.append(0)
+test['likes'] = l
+l =[]
+for i in test['dislikes']:
+    try :
+        l.append(int(i))
+    except:
+        l.append(0)
+test['dislikes'] = l
+l =[]
+for i in test['comment']:
+    try :
+        l.append(int(i))
+    except:
+        l.append(0)
+test['comment'] = l
+l=[]
+for i in test['duration']:
+    a = i.lstrip('PT').rstrip('S').replace('H','.').replace('M','.').split('.')
+    try:
+        if len(a)==3:
+            time = int(a[0])*60*60 + int(a[1])*60 + int(a[2])
+        elif len(a)==2:
+            time = int(a[0])*60 + int(a[1])
+        else:
+            time = int(a[0])
+    except:
+        time = int(a[0])*60
+    l.append(time)
+test['duration'] = l
+test['category'] = test['views']/test['duration']
+X = train.drop(['vidid','adview'],axis=1)
+y = train['adview']
+from sklearn.ensemble import RandomForestRegressor
+reg=RandomForestRegressor(n_estimators=200, max_depth=20,criterion='mse',n_jobs=-1,min_samples_leaf=3,min_samples_split=5)
+
+reg.fit(X,y)
+pred = reg.predict(test.drop('vidid',axis=1))
+test['adview'] = pred
+test[['vidid','adview']].to_csv('prediction.csv',index=False)
