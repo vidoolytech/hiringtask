@@ -1,0 +1,15 @@
+import pandas as pd
+import numpy as np
+from sklearn.ensemble import RandomForestClassifier
+from sklearn import cross_validation
+import csv
+test = pd.read_csv('C:\\Users\\User\\Downloads\\ad_org_test.csv',sep='\s*,\s*', skipinitialspace=True, engine='python')
+train = pd.read_csv('C:\\Users\\User\\Downloads\\ad_org_train.csv',sep='\s*,\s*', skipinitialspace=True, engine='python')
+def data_cleaning(train):
+    train["adviews"] = train["adviews"].fillna(train["adviews"].median())
+    train["views"] = train["views"].fillna(train["views"].median())
+    train["likes"] = train["likes"].fillna(train["likes"].median())
+    train["dislikes"] = train["unlikes"].fillna(train["dislikes"].median())
+    train["comments"] = train["comments"].fillna(train["comments"].median())
+    train["dislikes"] = train["unlikes"].fillna(train["dislikes"].median()).. i m still doing please give time...
+    
